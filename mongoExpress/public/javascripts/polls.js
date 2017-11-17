@@ -20,14 +20,14 @@ angular.module('poll', [])
     return $http.post('/polls', poll).success(function(data){
       $scope.polls.push(data);
     });
+      };
 
     $scope.addPoll = function() {
-      if($scope.formContent === '') { return; }
-      var newobject = {question:$scope.formContent, c1:'yes', v1:5, c2:'no', v2:10, c3:'', v3:0, c4:'', v4:0, c5:'', v5:0};
+      if($scope.question === '') { return; }
+      var newobject = {question:$scope.question, c1:'yes', v1:5, c2:'no', v2:10, c3:'', v3:0, c4:'', v4:0, c5:'', v5:0};
       $scope.create(newobject);
-      $scope.formContent = '';
+      $scope.question = '';
     };
-  };
 
   $scope.upvote = function(poll) {
     return $http.put('/polls/' + poll._id + '/upvote')
