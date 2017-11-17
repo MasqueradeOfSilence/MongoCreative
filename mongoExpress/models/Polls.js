@@ -10,7 +10,7 @@ var PollSchema = new mongoose.Schema({
   c4: {type: Number, default: 0},
   v4: {type: Number, default: 0},
   c5: {type: Number, default: 0},
-  v5: {type: Number, default: 0}
+  v5: {type: Number, default: 0},
 });
 
 PollSchema.methods.upvote = function(cb) {
