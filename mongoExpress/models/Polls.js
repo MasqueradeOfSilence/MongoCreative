@@ -13,8 +13,28 @@ var PollSchema = new mongoose.Schema({
   v5: {type: Number, default: 0},
 });
 
-PollSchema.methods.upvote = function(cb) {
+PollSchema.methods.upvote1 = function(cb) {
   this.v1 += 1;
+  this.save(cb);
+};
+
+PollSchema.methods.upvote2 = function(cb) {
+  this.v2 += 1;
+  this.save(cb);
+};
+
+PollSchema.methods.upvote3 = function(cb) {
+  this.v3 += 1;
+  this.save(cb);
+};
+
+PollSchema.methods.upvote4 = function(cb) {
+  this.v4 += 1;
+  this.save(cb);
+};
+
+PollSchema.methods.upvote5 = function(cb) {
+  this.v5 += 1;
   this.save(cb);
 };
 

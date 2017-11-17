@@ -38,8 +38,36 @@ router.get('/polls/:poll', function(req, res) {
   res.json(req.poll);
 });
 
-router.put('/polls/:poll/upvote', function(req, res, next) {
-  req.poll.upvote(function(err, poll){
+router.put('/polls/:poll/upvote1', function(req, res, next) {
+  req.poll.upvote1(function(err, poll){
+    if (err) { return next(err); }
+    res.json(poll);
+  });
+});
+
+router.put('/polls/:poll/upvote2', function(req, res, next) {
+  req.poll.upvote2(function(err, poll){
+    if (err) { return next(err); }
+    res.json(poll);
+  });
+});
+
+router.put('/polls/:poll/upvote3', function(req, res, next) {
+  req.poll.upvote3(function(err, poll){
+    if (err) { return next(err); }
+    res.json(poll);
+  });
+});
+
+router.put('/polls/:poll/upvote4', function(req, res, next) {
+  req.poll.upvote4(function(err, poll){
+    if (err) { return next(err); }
+    res.json(poll);
+  });
+});
+
+router.put('/polls/:poll/upvote5', function(req, res, next) {
+  req.poll.upvote5(function(err, poll){
     if (err) { return next(err); }
     res.json(poll);
   });
