@@ -12,4 +12,10 @@ var PollSchema = new mongoose.Schema({
   c5: {type: Number, default: 0},
   v5: {type: Number, default: 0}
 });
+
+PollSchema.methods.upvote = function(cb) {
+  this.v1 += 1;
+  this.save(cb);
+};
+
 mongoose.model('Poll', PollSchema);
