@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var Poll = mongoose.model('Poll');
 
 router.post('/polls', function(req, res, next) {
+  console.log("In post function");
   var poll = new Poll(req.body);
   poll.save(function(err, poll){
     if(err){ return next(err); }

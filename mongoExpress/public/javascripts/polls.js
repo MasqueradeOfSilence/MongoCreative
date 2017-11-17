@@ -17,6 +17,7 @@ angular.module('poll', [])
       console.log("create poll");
       console.log(poll);
       return $http.post('/polls', poll).success(function(data){
+        console.log("in function passed in");
         $scope.polls.push(data);
       });
     };
