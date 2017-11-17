@@ -9,14 +9,24 @@
 <script src="javascripts/polls.js"></script>
 </head>
 
-<body>
+<body ng-app="polls" ng-controller="MainCtrl">
 <form id="pollForm" action="">
 <label for="title">Poll Title: </label><input type="text" id="title" placeholder="Title of your poll"><br>
 <label for="question:">Question: </label><input type="text" id="question" placeholder="What are you asking the wonderful people of C S 260?"><br>
 </form>
 
 <button type="button" id="submit" class="btn btn-default">Submit</button>
-<div id="activePolls"></div>
+<div id="activePolls" ng-repeat="poll in polls">
+	{{poll.question}}
+	<br>
+	<!-- Will need an algorithm to control the size of the progress bars -->
+	<!-- will need to put in the upvote button -->
+	{{c1}} [votes: {{v1}}]
+	<br> {{c2}} [votes: {{v2}}]
+	<br> {{c3}} [votes: {{v3}}]
+	<br> {{c4}} [votes: {{v4}}]
+	<br> {{c5}} [votes: {{v5}}]
+</div>
 </body>
 </html>
 
