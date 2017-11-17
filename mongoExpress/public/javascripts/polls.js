@@ -14,10 +14,12 @@ angular.module('poll', [])
     $scope.getAll();
 
     $scope.create = function(poll) {
-    return $http.post('/polls', poll).success(function(data){
-      $scope.polls.push(data);
-    });
-      };
+      console.log("create poll");
+      console.log(poll);
+      return $http.post('/polls', poll).success(function(data){
+        $scope.polls.push(data);
+      });
+    };
 
     $scope.addPoll = function() {
       if($scope.question === '') { return; }
@@ -28,15 +30,15 @@ angular.module('poll', [])
       $scope.question = '';
     };
 
-  $scope.upvote = function(poll) {
-    return $http.put('/polls/' + poll._id + '/upvote')
-    .success(function(data){
-      console.log("upvote worked");
-      poll.v1 += 1;
-    });
-  };
+    $scope.upvote = function(poll) {
+      return $http.put('/polls/' + poll._id + '/upvote')
+      .success(function(data){
+        console.log("upvote worked");
+        poll.v1 += 1;
+      });
+    };
 
-  $scope.incrementUpvotes = function(poll) {
+    $scope.incrementUpvotes = function(poll) {
       $scope.upvote(poll);
     };
 
