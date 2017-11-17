@@ -40,7 +40,7 @@ what is your favorite flavor of ice cream?" required><br>
                 }}%">
     		{{(poll.v1/(poll.v1+poll.v2+poll.v3+poll.v4+poll.v5))*100
                 }}%
-  	</span></div><br>
+  	</span></div><br><br>
 	<div><p>{{poll.c2}} <strong>votes:</strong> {{poll.v2}} <span id="s2" ng-click="incrementUpvotes2(poll)">&#128077;</span></p>
 	<span class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
                 aria-valuenow="{{(poll.v2/(poll.v1+poll.v2+poll.v3+poll.v4+poll.v5))*100
@@ -48,10 +48,10 @@ what is your favorite flavor of ice cream?" required><br>
                 }}%">
                 {{(poll.v2/(poll.v1+poll.v2+poll.v3+poll.v4+poll.v5))*100
                 }}%
-        </span></div><br>
+        </span></div><br><br>
 	<div ng-switch="poll.c3">
 	<p ng-switch-when=" ''|| '_undefined_'">blank3</p>
-	<p ng-switch-default>{{poll.c3}} <strong>votes:</strong> {{poll.v3}} <span id="s3" ng-click="incrementUpvotes3(poll)">&#128077;</span>
+	<p ng-switch-default>{{poll.c3}} <strong>votes:</strong> {{poll.v3}} <span id="s3" ng-click="incrementUpvotes3(poll)">&#128077;</span></p>
 
 	<span class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
                 aria-valuenow="{{(poll.v3/(poll.v1+poll.v2+poll.v3+poll.v4+poll.v5))*100
@@ -59,11 +59,11 @@ what is your favorite flavor of ice cream?" required><br>
                 }}%">
                 {{(poll.v3/(poll.v1+poll.v2+poll.v3+poll.v4+poll.v5))*100
                 }}%
-        </span></p></div><br>
+        </span></div><br><br>
 
 	<div ng-switch="poll.c4">
 	<p ng-switch-when=" ''|| '_undefined_'">blank4</p>
-	<p ng-switch-default>{{poll.c4}} <strong>votes:</strong> {{poll.v4}} <span id="s4" ng-click="incrementUpvotes4(poll)">&#128077;</span>
+	<p ng-switch-default>{{poll.c4}} <strong>votes:</strong> {{poll.v4}} <span id="s4" ng-click="incrementUpvotes4(poll)">&#128077;</span></p>
 
 	<span class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar"
                 aria-valuenow="{{(poll.v4/(poll.v1+poll.v2+poll.v3+poll.v4+poll.v5))*100
@@ -71,11 +71,11 @@ what is your favorite flavor of ice cream?" required><br>
                 }}%">
                 {{(poll.v4/(poll.v1+poll.v2+poll.v3+poll.v4+poll.v5))*100
                 }}%
-        </span></p></div><br>
+        </span></div><br><br>
 
 	<div ng-switch="poll.c5">
 	<p ng-switch-when=" ''|| undefined">blank5</p>
-	<p ng-switch-default> {{poll.c5}} <strong>votes:</strong> {{poll.v5}} <span id="s5" ng-click="incrementUpvotes5(poll)">&#128077;</span>
+	<p ng-switch-default> {{poll.c5}} <strong>votes:</strong> {{poll.v5}} <span id="s5" ng-click="incrementUpvotes5(poll)">&#128077;</span></p>
 
 	<span class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar"
                 aria-valuenow="{{(poll.v5/(poll.v1+poll.v2+poll.v3+poll.v4+poll.v5))*100
@@ -83,8 +83,8 @@ what is your favorite flavor of ice cream?" required><br>
                 }}%">
                 {{(poll.v5/(poll.v1+poll.v2+poll.v3+poll.v4+poll.v5))*100
                 }}%
-        </span></p></div>
-	<br><br>
+        </span></div>
+	<br><br><br><br>
 </div>
 </body>
 </html>
