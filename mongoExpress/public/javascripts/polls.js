@@ -26,9 +26,9 @@ angular.module('poll', [])
       if($scope.question === '') { return; }
       console.log("adding poll");
       console.log($scope.question);
-      var c33 = ($scope.c3) ? $scope.c3 : "";
-      var c44 = ($scope.c4) ? $scope.c4 : "";
-      var c55 = ($scope.c4) ? $scope.c5 : "";
+      var c33 = ($scope.c3 != undefined) ? $scope.c3 : "";
+      var c44 = ($scope.c4 != undefined) ? $scope.c4 : "";
+      var c55 = ($scope.c4 != undefined) ? $scope.c5 : "";
       var newobject = {question:$scope.question, c1:$scope.c1, v1:0, c2:$scope.c2, v2:0, c3:c33, v3:0, c4:c44, v4:0, c5:c55, v5:0};
       $scope.create(newobject);
       $scope.question = '';
