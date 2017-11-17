@@ -27,7 +27,8 @@ angular.module('poll', [])
       console.log("adding poll");
       console.log($scope.question);
       var newobject = {question:$scope.question, c1:'yes', v1:5, c2:'no', v2:10, c3:'', v3:0, c4:'', v4:0, c5:'', v5:0};
-      $scope.create(newobject);
+      //$scope.create(newobject);
+      $scope.polls.push(newobject);
       $scope.question = '';
     };
 
