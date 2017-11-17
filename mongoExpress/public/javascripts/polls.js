@@ -23,7 +23,7 @@ angular.module('poll', [])
 
     $scope.addPoll = function() {
       if($scope.formContent === '') { return; }
-      var newobject = {question:$scope.formContent, , c1:'yes', v1:5, c2:'no', v2:10, c3:'', v3:0, c4:'', v4:0, c5:'', v5:0};
+      var newobject = {question:$scope.formContent, c1:'yes', v1:5, c2:'no', v2:10, c3:'', v3:0, c4:'', v4:0, c5:'', v5:0};
       $scope.create(newobject);
       $scope.formContent = '';
     };
