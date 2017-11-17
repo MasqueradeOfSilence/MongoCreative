@@ -32,11 +32,6 @@ what is your favorite flavor of ice cream?"><br>
 <h2>Active Polls</h2>
 <div id="activePolls" ng-repeat="poll in polls">
 	<strong><h4>{{poll.question}}</h4></strong>
-	<!-- Will need an algorithm to control the size of the progress bars -->
-	<!-- will need to put in the upvote button -->
-	<script>
-		//$scope.Math = window.Math;
-	</script>
 	<br>
 	<div><p>{{poll.c1}} <strong>votes:</strong> {{poll.v1}} <span id="s1" ng-click="incrementUpvotes1(poll)">&#128077;</span></p>
 	<span class="progress-bar progress-bar-striped active" role="progressbar"
@@ -79,7 +74,7 @@ what is your favorite flavor of ice cream?"><br>
         </span></p></div><br>
 	
 	<div ng-switch="poll.c5">
-	<p ng-switch-when="">pizza</p>
+	<p ng-switch-when=""></p>
 	<p ng-switch-default> {{poll.c5}} <strong>votes:</strong> {{poll.v5}} <span id="s5" ng-click="incrementUpvotes5(poll)">&#128077;</span>
 	
 	<span class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar"
