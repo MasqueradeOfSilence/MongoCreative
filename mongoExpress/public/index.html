@@ -20,22 +20,22 @@
 	<strong>{{poll.question}}</strong>
 	<!-- Will need an algorithm to control the size of the progress bars -->
 	<!-- will need to put in the upvote button -->
-	<div><p>{{poll.c1}} votes: {{poll.v1}}</p></div>
-	<div><p>{{poll.c2}} votes: {{poll.v2}}</p></div>
+	<div><p>{{poll.c1}} votes: {{poll.v1}} <span ng-click="incrementUpvotes(vote)">&#128077;</span></div></p>
+	<div><p>{{poll.c2}} votes: {{poll.v2}} <span ng-click="incrementUpvotes(vote)">&#128077;</span></div></p>
 	
 	<div ng-switch="poll.c3">
 	<p ng-switch-when=""></p>
-	<p ng-switch-default>{{poll.c3}} votes: {{poll.v3}}</p>
+	<p ng-switch-default>{{poll.c3}} votes: {{poll.v3}} <span ng-click="incrementUpvotes(vote)">&#128077;</span></p>
 	</div>
 
 	<div ng-switch="poll.c4">
 	<p ng-switch-when=""></p>
-	<p ng-switch-default>{{poll.c4}} votes: {{poll.v4}}</p>
+	<p ng-switch-default>{{poll.c4}} votes: {{poll.v4}} <span ng-click="incrementUpvotes(vote)">&#128077;</span></p>
 	</div>
 	
 	<div ng-switch="poll.c5">
 	<p ng-switch-when=""</p>
-	<p ng-switch-default> {{poll.c5}} votes: {{poll.v5}}</p>
+	<p ng-switch-default> {{poll.c5}} votes: {{poll.v5}} <span ng-click="incrementUpvotes(vote)">&#128077;</span></p>
 	</div>
 </div>
 </body>
