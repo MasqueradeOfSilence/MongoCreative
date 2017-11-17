@@ -5,14 +5,14 @@ var Poll = mongoose.model('Poll');
 
 router.post('/polls', function(req, res, next) {
   var poll = new Poll(req.body);
-  poll.save(function(err, comment){
+  poll.save(function(err, poll){
     if(err){ return next(err); }
-    res.json(comment);
+    res.json(poll);
   });
 });
 
 router.get('/polls', function(req, res, next) {
-  Comment.find(function(err, polls){
+  Poll.find(function(err, polls){
     if(err){ return next(err); }
     res.json(polls);
   });
