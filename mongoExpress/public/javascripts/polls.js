@@ -33,7 +33,8 @@ angular.module('poll', [])
 
     $scope.upvote1 = function(poll) {
 	console.log("calling upvote1 method");
-      return $http.put('/polls/' + poll._id + '/upvote')
+	console.log("Poll ID is: " + poll._id);
+      return $http.put('/polls/' + poll._id + '/upvote1')
       .success(function(data){
         console.log("upvote worked");
         poll.v1 += 1;
@@ -46,7 +47,7 @@ angular.module('poll', [])
     };
 
     $scope.upvote2 = function(poll) {
-      return $http.put('/polls/' + poll._id + '/upvote')
+      return $http.put('/polls/' + poll._id + '/upvote2')
       .success(function(data){
         console.log("upvote worked");
         poll.v2 += 1;
@@ -58,7 +59,7 @@ angular.module('poll', [])
     };
 
     $scope.upvote3 = function(poll) {
-      return $http.put('/polls/' + poll._id + '/upvote')
+      return $http.put('/polls/' + poll._id + '/upvote3')
       .success(function(data){
         console.log("upvote worked");
         poll.v3 += 1;
@@ -70,7 +71,7 @@ angular.module('poll', [])
     };
 
     $scope.upvote4 = function(poll) {
-      return $http.put('/polls/' + poll._id + '/upvote')
+      return $http.put('/polls/' + poll._id + '/upvote4')
       .success(function(data){
         console.log("upvote worked");
         poll.v4 += 1;
@@ -82,7 +83,7 @@ angular.module('poll', [])
     };
 
     $scope.upvote5 = function(poll) {
-      return $http.put('/polls/' + poll._id + '/upvote')
+      return $http.put('/polls/' + poll._id + '/upvote5')
       .success(function(data){
         console.log("upvote worked");
         poll.v5 += 1;
