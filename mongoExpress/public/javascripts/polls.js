@@ -32,6 +32,7 @@ angular.module('poll', [])
     };
 
     $scope.upvote1 = function(poll) {
+	console.log("calling upvote1 method");
       return $http.put('/polls/' + poll._id + '/upvote')
       .success(function(data){
         console.log("upvote worked");
@@ -40,6 +41,7 @@ angular.module('poll', [])
     };
 
     $scope.incrementUpvotes1 = function(poll) {
+	console.log("incrementing upvotes for 1");
       $scope.upvote1(poll);
     };
 

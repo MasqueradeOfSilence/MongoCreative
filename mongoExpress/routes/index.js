@@ -39,6 +39,7 @@ router.get('/polls/:poll', function(req, res) {
 });
 
 router.put('/polls/:poll/upvote1', function(req, res, next) {
+	console.log("in upvote1 in index.js");
   req.poll.upvote1(function(err, poll){
     if (err) { return next(err); }
     res.json(poll);
