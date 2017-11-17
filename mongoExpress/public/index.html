@@ -15,14 +15,14 @@
 <form id="pollForm" action="" ng-submit="addPoll()">
 
 <h2>Submit a New Poll</h2>
-<label for="question:">Question: </label> <input type="text" ng-model="question" id="question" size="50" placeholder="Sample: 
-what is your favorite flavor of ice cream?"><br>
+<label for="question:">Question: </label> <input type="text" ng-model="question" id="question" size="50" placeholder="Sample:
+what is your favorite flavor of ice cream?" required><br>
 
-<label for="c1:">Option 1: </label> <input type="text" ng-model="c1" id="c1" size="50" value="This value is required"><br>
-<label for="c2:">Option 2: </label> <input type="text" ng-model="c2" id="c2" size="50" value="This value is required"><br>
-<label for="c3:">Option 3: </label> <input type="text" ng-model="c3" id="c3" size="50" placeholder="chocolate chip" value=""><br>
-<label for="c4:">Option 4: </label> <input type="text" ng-model="c4" id="c4" size="50" placeholder="vanilla" value=""><br>
-<label for="c5:">Option 5: </label> <input type="text" ng-model="c5" id="c5" size="50" placeholder="other" value=""><br>
+<label for="c1:">Option 1: </label> <input type="text" ng-model="c1" id="c1" size="50" value="This value is required" required><br>
+<label for="c2:">Option 2: </label> <input type="text" ng-model="c2" id="c2" size="50" value="This value is required" required><br>
+<label for="c3:">Option 3: </label> <input type="text" ng-model="c3" id="c3" size="50" placeholder="chocolate chip" value="" required><br>
+<label for="c4:">Option 4: </label> <input type="text" ng-model="c4" id="c4" size="50" placeholder="vanilla" value="" required><br>
+<label for="c5:">Option 5: </label> <input type="text" ng-model="c5" id="c5" size="50" placeholder="other" value="" required><br>
 <button type="submit" id="isubmit" class="btn btn-default">Submit</button>
 
 </form>
@@ -52,7 +52,7 @@ what is your favorite flavor of ice cream?"><br>
 	<div ng-switch="poll.c3">
 	<p ng-switch-when=" ''|| '_undefined_'">blank3</p>
 	<p ng-switch-default>{{poll.c3}} <strong>votes:</strong> {{poll.v3}} <span id="s3" ng-click="incrementUpvotes3(poll)">&#128077;</span>
-	
+
 	<span class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
                 aria-valuenow="{{(poll.v3/(poll.v1+poll.v2+poll.v3+poll.v4+poll.v5))*100
                 }}" aria-valuemin="0" aria-valuemax="100" style="width:{{(poll.v3/(poll.v1+poll.v2+poll.v3+poll.v4+poll.v5))*100
@@ -64,7 +64,7 @@ what is your favorite flavor of ice cream?"><br>
 	<div ng-switch="poll.c4">
 	<p ng-switch-when=" ''|| '_undefined_'">blank4</p>
 	<p ng-switch-default>{{poll.c4}} <strong>votes:</strong> {{poll.v4}} <span id="s4" ng-click="incrementUpvotes4(poll)">&#128077;</span>
-	
+
 	<span class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar"
                 aria-valuenow="{{(poll.v4/(poll.v1+poll.v2+poll.v3+poll.v4+poll.v5))*100
                 }}" aria-valuemin="0" aria-valuemax="100" style="width:{{(poll.v4/(poll.v1+poll.v2+poll.v3+poll.v4+poll.v5))*100
@@ -72,11 +72,11 @@ what is your favorite flavor of ice cream?"><br>
                 {{(poll.v4/(poll.v1+poll.v2+poll.v3+poll.v4+poll.v5))*100
                 }}%
         </span></p></div><br>
-	
+
 	<div ng-switch="poll.c5">
 	<p ng-switch-when=" ''|| undefined">blank5</p>
 	<p ng-switch-default> {{poll.c5}} <strong>votes:</strong> {{poll.v5}} <span id="s5" ng-click="incrementUpvotes5(poll)">&#128077;</span>
-	
+
 	<span class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar"
                 aria-valuenow="{{(poll.v5/(poll.v1+poll.v2+poll.v3+poll.v4+poll.v5))*100
                 }}" aria-valuemin="0" aria-valuemax="100" style="width:{{(poll.v5/(poll.v1+poll.v2+poll.v3+poll.v4+poll.v5))*100
@@ -88,4 +88,3 @@ what is your favorite flavor of ice cream?"><br>
 </div>
 </body>
 </html>
-
