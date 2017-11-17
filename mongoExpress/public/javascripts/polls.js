@@ -26,12 +26,12 @@ angular.module('poll', [])
       if($scope.question === '') { return; }
       console.log("adding poll");
       console.log($scope.question);
-      var newobject = {question:$scope.question, c1:$scope.c1, v1:$scope.v1, c2:$scope.c2, v2:$scope.v2, c3:$scope.c3, v3:$scope.v3, c4:$scope.c4, v4:$scope.v4, c5:$scope.c5, v5:$scope.v5};
+      var newobject = {question:$scope.question, c1:$scope.c1, v1:0, c2:$scope.c2, v2:0, c3:$scope.c3, v3:0, c4:$scope.c4, v4:0, c5:$scope.c5, v5:0};
       $scope.create(newobject);
       $scope.question = '';
     };
 
-    $scope.upvote = function(poll) {
+    $scope.upvote1 = function(poll) {
       return $http.put('/polls/' + poll._id + '/upvote')
       .success(function(data){
         console.log("upvote worked");
@@ -39,8 +39,56 @@ angular.module('poll', [])
       });
     };
 
-    $scope.incrementUpvotes = function(poll) {
-      $scope.upvote(poll);
+    $scope.incrementUpvotes1 = function(poll) {
+      $scope.upvote1(poll);
+    };
+
+    $scope.upvote2 = function(poll) {
+      return $http.put('/polls/' + poll._id + '/upvote')
+      .success(function(data){
+        console.log("upvote worked");
+        poll.v2 += 1;
+      });
+    };
+
+    $scope.incrementUpvotes2 = function(poll) {
+      $scope.upvote2(poll);
+    };
+
+    $scope.upvote3 = function(poll) {
+      return $http.put('/polls/' + poll._id + '/upvote')
+      .success(function(data){
+        console.log("upvote worked");
+        poll.v3 += 1;
+      });
+    };
+
+    $scope.incrementUpvotes3 = function(poll) {
+      $scope.upvote3(poll);
+    };
+
+    $scope.upvote4 = function(poll) {
+      return $http.put('/polls/' + poll._id + '/upvote')
+      .success(function(data){
+        console.log("upvote worked");
+        poll.v4 += 1;
+      });
+    };
+
+    $scope.incrementUpvotes4 = function(poll) {
+      $scope.upvote4(poll);
+    };
+
+    $scope.upvote5 = function(poll) {
+      return $http.put('/polls/' + poll._id + '/upvote')
+      .success(function(data){
+        console.log("upvote worked");
+        poll.v5 += 1;
+      });
+    };
+
+    $scope.incrementUpvotes5 = function(poll) {
+      $scope.upvote5(poll);
     };
 
     /*
